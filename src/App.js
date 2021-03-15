@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        
         <p>Count main app : {count}</p>
         <Header count={count} setCount={setCount}></Header>
         <Home count={count}></Home>
