@@ -3,12 +3,14 @@ import './App.css';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Shipment from './components/Shipment/Shipment';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
+
+export const CategoryContext = createContext();
 
 function App() {
   const [count, setCount] = useState(0);
   return (
-    <div className="App">
+    <CategoryContext.Provider value='laptop'>
       <header className="App-header">
         
         <p>Count main app : {count}</p>
@@ -17,7 +19,7 @@ function App() {
         <Shipment></Shipment>
         
       </header>
-    </div>
+    </CategoryContext.Provider>
   );
 }
 
