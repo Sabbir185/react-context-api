@@ -10,12 +10,12 @@ export const CategoryContext = createContext();
 function App() {
   const [count, setCount] = useState(0);
   return (
-    <CategoryContext.Provider value='laptop'>
+    <CategoryContext.Provider value={count}>
       <header className="App-header">
         
         <p>Count main app : {count}</p>
         <Header count={count} setCount={setCount}></Header>
-        <Home count={count}></Home>
+        <Home></Home>
         <Shipment></Shipment>
         
       </header>
